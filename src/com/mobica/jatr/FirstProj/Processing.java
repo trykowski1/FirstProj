@@ -5,6 +5,7 @@ import java.util.Random;
 public class Processing {
 	String a;
 	String b;
+	String c;
 
 	private void start() {
 
