@@ -2,6 +2,8 @@ package com.mobica.jatr.SecondProj;
 
 import static org.junit.Assert.*;
 
+import java.io.*;
+
 import org.junit.Test;
 
 import com.mobica.jatr.FirstProj.SpaceCraft;
@@ -17,8 +19,11 @@ public class SpaceCraftUnit {
 		Float y[] ={new Float(9), new Float(8)};
 		
 		sputnikTest.moves(x, y);
-		assertEquals(new Float(0), sputnikTest.get_x());
-		assertEquals(new Float(17), sputnikTest.get_y());
+		
+			assertEquals(new Float(0), sputnikTest.get_x());
+			assertEquals(new Float(17), sputnikTest.get_y());		
+		
 	}
+	
 
 }

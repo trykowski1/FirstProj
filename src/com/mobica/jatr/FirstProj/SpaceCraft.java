@@ -21,10 +21,12 @@ public class SpaceCraft {
 	public Float get_y() {
 		return y;
 	}
+	
 
 	private void move(Float x, Float y) {
 		this.x = x;
 		this.y = y;
+		
 	}
 
 	public void moves(Float[] x, Float[] y) {
