@@ -3,16 +3,35 @@ package com.mobica.jatr.ForthProj;
 public class StarsMain {
 
 	public static void main(String[] args) {
-		//a
+		// a
 		Sun sunny = new Sun();
 		Sirus siriously = new Sirus();
 		
-		//b
+		// b
+		sunny.shine();
+		siriously.shine();
 		
-		//c
+		// c/e
 		Sun supersunny = new SuperSun();
-		((SuperSun)supersunny).getSuperSun();
+		System.out.println(((SuperSun)supersunny).getSuperSun());
+	
+		// d/e
+		Sun ultrasunny = new UltraSun();
+		System.out.println(((UltraSun)ultrasunny).getUltraSun());
 		
+		// f
+		
+		try {
+			((SuperSun)supersunny).getSuperSun();
+		} catch(ClassCastException castEx){
+			System.out.println("Error occured in casting: "+castEx.toString());
+		}
+		
+		try {
+			((UltraSun)ultrasunny).getUltraSun();
+		} catch(ClassCastException castEx){
+			System.out.println("Error occured in casting: "+castEx.toString());
+		}
 	}
 
 }
