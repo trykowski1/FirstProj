@@ -6,16 +6,33 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
 
 public class HashUnitTest {
 
-	MainHashExercise test = new MainHashExercise();
-	Map<MyHashMapKey, String> hash = new HashMap<MyHashMapKey, String>();
+	private MainHashExercise exercise = new MainHashExercise();
+	private ArrayList<MyHashMapKey> listofkey = new ArrayList<MyHashMapKey>();
+	private Map<MyHashMapKey, String> hasshy = new HashMap<MyHashMapKey, String>();
+	
+	public ArrayList<MyHashMapKey>getListOfKeys(){
+		exercise.setMapHash();
+		hasshy = exercise.getMapHash();
+		
+		Set<Entry<MyHashMapKey, String>> set = hasshy.entrySet();
+	    Iterator<Entry<MyHashMapKey, String>> i = set.iterator();
+	    	while(i.hasNext()) {
+	    		Entry<MyHashMapKey, String> me = i.next();
+	    		System.out.println(me.getKey());
+	    		listofkey.add(me.getKey());
+	    	}
+	    return listofkey;
+	}
 
 	@Before
 	public void setUp() throws Exception {
@@ -29,26 +46,21 @@ public class HashUnitTest {
 
 	@Test
 	public void test() {
-		hash = test.hash();
-		boolean col = true;
-		ArrayList<MyHashMapKey> list = new ArrayList<MyHashMapKey>();
-		hash.
-		Set set = hash.entrySet();
-	    Iterator i = set.iterator();
-	    while(i.hasNext()) {
-	    	Map.Entry me = (Map.Entry)i.next();
-	    	list.add(me.getKey());
+		this.getListOfKeys();
+		boolean result = true;
 		
-		
-
-		for (int i = 0; i < hash.size() - 1; i++) {
-			if (hash. == collection.get(i + 1)) {
-				col = false;
-				break;
-			} else {
-				col = true;
-			}
+		for (int i = 0; i < listofkey.size()-1; i++){
+			 if(listofkey.get(i).equals(listofkey.get(i+1))){
+				 result = false;
+				 break;
+			 }
+			 else{
+				 result = true;
+			 }
 		}
+		
+		Assert.assertTrue("Test failed. Some of the keys are equal" , result==true);
+		
 	}
 
 }
