@@ -28,7 +28,7 @@ public class HashUnitTest {
 	    Iterator<Entry<MyHashMapKey, String>> i = set.iterator();
 	    	while(i.hasNext()) {
 	    		Entry<MyHashMapKey, String> me = i.next();
-	    		System.out.println(me.getKey());
+	    		///System.out.println(me.getKey());
 	    		listofkey.add(me.getKey());
 	    	}
 	    return listofkey;
