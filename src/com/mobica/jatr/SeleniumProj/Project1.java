@@ -21,7 +21,7 @@ public class Project1 {
 	public static void setUpBeforeClass() throws Exception {
 	
 		driver = new FirefoxDriver(); 
-		driver.manage();
+		//driver.manage();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
@@ -32,7 +32,9 @@ public class Project1 {
 
 	@Test
 	public void atestJava() throws Exception {
+		//WebElement element;
 		driver.get(baseUrl + "/");
+		//WebElement element = ((FindsById)driver).findElementById("verifybutton");
 		driver.findElement(By.id("gbqfq")).clear();
 		driver.findElement(By.id("gbqfq")).sendKeys("Spacecraft wiki");
 		driver.findElement(By.id("gbqfb")).click();

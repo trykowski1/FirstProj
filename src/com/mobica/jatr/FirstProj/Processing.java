@@ -34,7 +34,7 @@ public class Processing {
 
 		a = sputnik.to_String();
 		b = luna.to_String();
-
+		
 		/*
 		 * Float[] x ={new Float(6), new Float(1), new Float(0), new Float(1)};
 		 * Float[] y ={new Float(7), new Float(4), new Float(0), new Float(0)};
