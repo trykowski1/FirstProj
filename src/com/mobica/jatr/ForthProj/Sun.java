@@ -6,6 +6,7 @@ public class Sun extends Star {
 	public Float getShinningRange() {
 		Float i = new Float(1);
 		return i;
+		
 	}
 
 }

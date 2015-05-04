@@ -47,7 +47,6 @@ public class Processing {
 	public static void main(String[] args) {
 		Processing process = new Processing();
 		process.start();
-		
 
 		System.out.println();
 		System.out.println(process.a);
